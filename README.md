@@ -28,3 +28,4 @@ go build -o gen code-gen/code-gen.go
 ## Notes
 
 * Files live under `./files/` (change `ROOT_DIR` in `main.go` if needed).
+* If you are using Nginx, change `PREFIX` in `static/app.js` if needed.
