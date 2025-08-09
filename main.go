@@ -55,7 +55,7 @@ func consumeCodeFile(input string) (bool, string) {
 			return true, ""
 		}
 	}
-	return false, "验证码无效或已被使用"
+	return false, "验证码无效"
 }
 
 /* =============
@@ -255,7 +255,7 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if !consumeToken(token) {
-		http.Error(w, "token 无效或已过期", http.StatusForbidden)
+		http.Error(w, "token 无效", http.StatusForbidden)
 		return
 	}
 
