@@ -23,7 +23,7 @@ go build -o gen code-gen/code-gen.go
 
 ## UI
 <img width="1164" height="661" alt="onlyFiles" src="https://github.com/user-attachments/assets/426edb61-c681-48cf-8712-d0a21d261d91" />
-Access my [website](www.sheot.cn/downloads/) to preview.
+Access my website to preview -> www.sheot.cn/downloads/
 
 ## Notes
 
