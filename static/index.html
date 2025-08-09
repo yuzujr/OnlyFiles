@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Only Files</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="hdr">
+    <div class="wrap">
+      <h1>Only Files</h1>
+      <nav id="crumbs" class="crumbs"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- 浏览区域 -->
+    <section class="card">
+      <div class="toolbar">
+        <button id="btnUp">上一级</button>
+        <button id="btnRefresh">刷新</button>
+        <span id="where" class="pill"></span>
+        <input id="q" type="search" placeholder="搜索文件/目录" />
+      </div>
+
+      <table class="grid">
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>最后修改</th>
+            <th class="right">大小</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <td class="muted" colspan="3">加载中…</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="muted hint">单击目录进入；单击文件直接下载。</p>
+    </section>
+
+    <!-- 上传区域 -->
+    <section class="card">
+      <h3 class="h3">一次性验证码上传</h3>
+
+      <div class="upline">
+        <input id="code" type="text" placeholder="请输入验证码" />
+        <button id="btnUpload">上传</button>
+        <progress id="prog" max="100" value="0" hidden></progress>
+        <span id="progText" class="muted small"></span>
+      </div>
+
+      <div id="drop" class="dropzone">
+        <input id="file" type="file" />
+        <div>
+          <div class="bold">点击或拖拽文件到此区域</div>
+          <div class="muted small">仅允许 1 个文件；大小与类型以服务器限制为准</div>
+          <div id="fileName" class="file-name-display"></div>
+        </div>
+      </div>
+
+      <div id="status" class="status"></div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
